@@ -16,6 +16,7 @@
 		D8910ADC1DB0460E0024486A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8910ADA1DB0460E0024486A /* LaunchScreen.storyboard */; };
 		D8910AE71DB0460E0024486A /* iosfinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910AE61DB0460E0024486A /* iosfinalTests.m */; };
 		D8910AF21DB0460E0024486A /* iosfinalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910AF11DB0460E0024486A /* iosfinalUITests.m */; };
+		D8910B011DB046270024486A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8910B001DB046270024486A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D8910AED1DB0460E0024486A /* iosfinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosfinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8910AF11DB0460E0024486A /* iosfinalUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosfinalUITests.m; sourceTree = "<group>"; };
 		D8910AF31DB0460E0024486A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8910B001DB046270024486A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8910B011DB046270024486A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 				D8910AE51DB0460E0024486A /* iosfinalTests */,
 				D8910AF01DB0460E0024486A /* iosfinalUITests */,
 				D8910AC71DB0460E0024486A /* Products */,
+				D8910AFF1DB046270024486A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +145,14 @@
 				D8910AF31DB0460E0024486A /* Info.plist */,
 			);
 			path = iosfinalUITests;
+			sourceTree = "<group>";
+		};
+		D8910AFF1DB046270024486A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8910B001DB046270024486A /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +223,11 @@
 					D8910AC51DB0460E0024486A = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D8910AE11DB0460E0024486A = {
 						CreatedOnToolsVersion = 8.0;
