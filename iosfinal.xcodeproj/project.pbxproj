@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80B09E61DC199C10028B83B /* EntregaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B09E51DC199C10028B83B /* EntregaViewController.m */; };
+		D80B09E91DC19C510028B83B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B09E81DC19C510028B83B /* MainTableViewController.m */; };
 		D8910ACB1DB0460E0024486A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910ACA1DB0460E0024486A /* main.m */; };
 		D8910ACE1DB0460E0024486A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910ACD1DB0460E0024486A /* AppDelegate.m */; };
 		D8910AD11DB0460E0024486A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910AD01DB0460E0024486A /* ViewController.m */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D80B09E41DC199C10028B83B /* EntregaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntregaViewController.h; sourceTree = "<group>"; };
+		D80B09E51DC199C10028B83B /* EntregaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntregaViewController.m; sourceTree = "<group>"; };
+		D80B09E71DC19C510028B83B /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		D80B09E81DC19C510028B83B /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		D8910AC61DB0460E0024486A /* iosfinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosfinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8910ACA1DB0460E0024486A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8910ACC1DB0460E0024486A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,7 +113,11 @@
 		D8910AC81DB0460E0024486A /* iosfinal */ = {
 			isa = PBXGroup;
 			children = (
+				D80B09E41DC199C10028B83B /* EntregaViewController.h */,
+				D80B09E51DC199C10028B83B /* EntregaViewController.m */,
 				D8910ACC1DB0460E0024486A /* AppDelegate.h */,
+				D80B09E71DC19C510028B83B /* MainTableViewController.h */,
+				D80B09E81DC19C510028B83B /* MainTableViewController.m */,
 				D8910ACD1DB0460E0024486A /* AppDelegate.m */,
 				D8910ACF1DB0460E0024486A /* ViewController.h */,
 				D8910AD01DB0460E0024486A /* ViewController.m */,
@@ -293,7 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80B09E61DC199C10028B83B /* EntregaViewController.m in Sources */,
 				D8910AD11DB0460E0024486A /* ViewController.m in Sources */,
+				D80B09E91DC19C510028B83B /* MainTableViewController.m in Sources */,
 				D8910ACE1DB0460E0024486A /* AppDelegate.m in Sources */,
 				D8910AD71DB0460E0024486A /* iosfinal.xcdatamodeld in Sources */,
 				D8910ACB1DB0460E0024486A /* main.m in Sources */,
@@ -526,6 +538,7 @@
 				D8910AF81DB0460E0024486A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8910AF91DB0460E0024486A /* Build configuration list for PBXNativeTarget "iosfinalTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +547,7 @@
 				D8910AFB1DB0460E0024486A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8910AFC1DB0460E0024486A /* Build configuration list for PBXNativeTarget "iosfinalUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +556,7 @@
 				D8910AFE1DB0460E0024486A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
