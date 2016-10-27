@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B29A243E1DC2C36300DEB241 /* Entrega.m in Sources */ = {isa = PBXBuildFile; fileRef = B29A243D1DC2C36300DEB241 /* Entrega.m */; };
+		B29A24411DC2C43400DEB241 /* Entrega+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B29A24401DC2C43400DEB241 /* Entrega+CoreDataProperties.m */; };
 		D80B09E61DC199C10028B83B /* EntregaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B09E51DC199C10028B83B /* EntregaViewController.m */; };
 		D80B09E91DC19C510028B83B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B09E81DC19C510028B83B /* MainTableViewController.m */; };
 		D8910ACB1DB0460E0024486A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910ACA1DB0460E0024486A /* main.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B29A243D1DC2C36300DEB241 /* Entrega.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrega.m; sourceTree = "<group>"; };
+		B29A243F1DC2C3B200DEB241 /* Entrega.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entrega.h; sourceTree = "<group>"; };
+		B29A24401DC2C43400DEB241 /* Entrega+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entrega+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B29A24421DC2C46200DEB241 /* Entrega+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Entrega+CoreDataProperties.h"; sourceTree = "<group>"; };
 		D80B09E41DC199C10028B83B /* EntregaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntregaViewController.h; sourceTree = "<group>"; };
 		D80B09E51DC199C10028B83B /* EntregaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntregaViewController.m; sourceTree = "<group>"; };
 		D80B09E71DC19C510028B83B /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
@@ -89,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2246E1D1DC2BCF3009A7187 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				B29A243D1DC2C36300DEB241 /* Entrega.m */,
+				B29A243F1DC2C3B200DEB241 /* Entrega.h */,
+				B29A24401DC2C43400DEB241 /* Entrega+CoreDataProperties.m */,
+				B29A24421DC2C46200DEB241 /* Entrega+CoreDataProperties.h */,
+			);
+			name = Modelos;
+			sourceTree = "<group>";
+		};
 		D8910ABD1DB0460E0024486A = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +130,7 @@
 		D8910AC81DB0460E0024486A /* iosfinal */ = {
 			isa = PBXGroup;
 			children = (
+				B2246E1D1DC2BCF3009A7187 /* Modelos */,
 				D80B09E41DC199C10028B83B /* EntregaViewController.h */,
 				D80B09E51DC199C10028B83B /* EntregaViewController.m */,
 				D8910ACC1DB0460E0024486A /* AppDelegate.h */,
@@ -303,10 +321,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29A24411DC2C43400DEB241 /* Entrega+CoreDataProperties.m in Sources */,
 				D80B09E61DC199C10028B83B /* EntregaViewController.m in Sources */,
 				D8910AD11DB0460E0024486A /* ViewController.m in Sources */,
 				D80B09E91DC19C510028B83B /* MainTableViewController.m in Sources */,
 				D8910ACE1DB0460E0024486A /* AppDelegate.m in Sources */,
+				B29A243E1DC2C36300DEB241 /* Entrega.m in Sources */,
 				D8910AD71DB0460E0024486A /* iosfinal.xcdatamodeld in Sources */,
 				D8910ACB1DB0460E0024486A /* main.m in Sources */,
 			);
