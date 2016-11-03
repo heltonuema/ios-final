@@ -10,6 +10,7 @@
 
 @interface MainTableViewController ()
 
+@property (strong, nonatomic) IBOutlet UITableView *listEntregas;
 @end
 
 @implementation MainTableViewController
