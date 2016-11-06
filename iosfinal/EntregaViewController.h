@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entrega.h"
 
 @interface EntregaViewController : UIViewController
+
+@property Entrega * entrega;
 
 @end

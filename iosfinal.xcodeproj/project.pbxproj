@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20876801DCBF43B00A1819D /* UIViewController+CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = B208767F1DCBF43B00A1819D /* UIViewController+CoreData.m */; };
+		B20876841DCBF47F00A1819D /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = B20876831DCBF47F00A1819D /* Address.m */; };
 		B29A243E1DC2C36300DEB241 /* Entrega.m in Sources */ = {isa = PBXBuildFile; fileRef = B29A243D1DC2C36300DEB241 /* Entrega.m */; };
 		B29A24411DC2C43400DEB241 /* Entrega+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B29A24401DC2C43400DEB241 /* Entrega+CoreDataProperties.m */; };
 		D80B09E61DC199C10028B83B /* EntregaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B09E51DC199C10028B83B /* EntregaViewController.m */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B208767E1DCBF43B00A1819D /* UIViewController+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CoreData.h"; sourceTree = "<group>"; };
+		B208767F1DCBF43B00A1819D /* UIViewController+CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CoreData.m"; sourceTree = "<group>"; };
+		B20876821DCBF47F00A1819D /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		B20876831DCBF47F00A1819D /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 		B29A243D1DC2C36300DEB241 /* Entrega.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entrega.m; sourceTree = "<group>"; };
 		B29A243F1DC2C3B200DEB241 /* Entrega.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entrega.h; sourceTree = "<group>"; };
 		B29A24401DC2C43400DEB241 /* Entrega+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Entrega+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -95,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20876811DCBF45900A1819D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				B20876821DCBF47F00A1819D /* Address.h */,
+				B20876831DCBF47F00A1819D /* Address.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		B2246E1D1DC2BCF3009A7187 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +145,9 @@
 		D8910AC81DB0460E0024486A /* iosfinal */ = {
 			isa = PBXGroup;
 			children = (
+				B20876811DCBF45900A1819D /* Map */,
+				B208767E1DCBF43B00A1819D /* UIViewController+CoreData.h */,
+				B208767F1DCBF43B00A1819D /* UIViewController+CoreData.m */,
 				B2246E1D1DC2BCF3009A7187 /* Modelos */,
 				D80B09E41DC199C10028B83B /* EntregaViewController.h */,
 				D80B09E51DC199C10028B83B /* EntregaViewController.m */,
@@ -326,8 +344,10 @@
 				D8910AD11DB0460E0024486A /* ViewController.m in Sources */,
 				D80B09E91DC19C510028B83B /* MainTableViewController.m in Sources */,
 				D8910ACE1DB0460E0024486A /* AppDelegate.m in Sources */,
+				B20876801DCBF43B00A1819D /* UIViewController+CoreData.m in Sources */,
 				B29A243E1DC2C36300DEB241 /* Entrega.m in Sources */,
 				D8910AD71DB0460E0024486A /* iosfinal.xcdatamodeld in Sources */,
+				B20876841DCBF47F00A1819D /* Address.m in Sources */,
 				D8910ACB1DB0460E0024486A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
