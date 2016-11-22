@@ -110,39 +110,46 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="1Es-fZ-ooR"/>
+                                <exclude reference="Zac-hO-fXP"/>
+                                <exclude reference="4jP-fL-URM"/>
+                                <exclude reference="LXb-ex-iIt"/>
                                 <exclude reference="2Wy-M1-eQU"/>
                                 <exclude reference="iw8-c2-nA2"/>
                                 <exclude reference="vQc-Xw-rrF"/>
-                                <exclude reference="9zL-4O-H2X"/>
-                                <exclude reference="4jP-fL-URM"/>
-                                <exclude reference="LXb-ex-iIt"/>
+                                <exclude reference="Gec-qP-VCl"/>
+                                <exclude reference="ImL-8s-VAG"/>
+                                <exclude reference="U0e-28-6MA"/>
                                 <exclude reference="Tts-yC-35e"/>
                                 <exclude reference="eWC-Kd-8Uw"/>
                                 <exclude reference="k1F-Pe-gBu"/>
                                 <exclude reference="z0a-So-rOj"/>
-                                <exclude reference="1Es-fZ-ooR"/>
-                                <exclude reference="Zac-hO-fXP"/>
-                                <exclude reference="Gec-qP-VCl"/>
-                                <exclude reference="ImL-8s-VAG"/>
-                                <exclude reference="U0e-28-6MA"/>
+                                <exclude reference="9zL-4O-H2X"/>
                                 <exclude reference="n3f-AG-2PO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="1Es-fZ-ooR"/>
+                                <include reference="Zac-hO-fXP"/>
+                                <exclude reference="mrb-f4-bny"/>
+                                <exclude reference="ynd-5W-rJo"/>
+                                <include reference="4jP-fL-URM"/>
+                                <exclude reference="Ep8-4z-abC"/>
+                                <exclude reference="LJB-jp-4uJ"/>
+                                <include reference="LXb-ex-iIt"/>
                                 <exclude reference="0Ad-4E-sCk"/>
                                 <include reference="2Wy-M1-eQU"/>
                                 <exclude reference="M3s-eS-gJP"/>
                                 <exclude reference="eKD-r5-gy4"/>
                                 <include reference="iw8-c2-nA2"/>
                                 <include reference="vQc-Xw-rrF"/>
-                                <include reference="9zL-4O-H2X"/>
-                                <exclude reference="cxH-j3-HN3"/>
-                                <exclude reference="fX3-ZI-a9V"/>
-                                <include reference="4jP-fL-URM"/>
-                                <exclude reference="Ep8-4z-abC"/>
-                                <exclude reference="LJB-jp-4uJ"/>
-                                <include reference="LXb-ex-iIt"/>
+                                <exclude reference="9vS-g1-Vpg"/>
+                                <include reference="Gec-qP-VCl"/>
+                                <include reference="ImL-8s-VAG"/>
+                                <include reference="U0e-28-6MA"/>
+                                <exclude reference="fYy-lR-moK"/>
+                                <exclude reference="lUr-4m-nme"/>
                                 <exclude reference="JUs-cq-RKd"/>
                                 <exclude reference="MB8-bs-gqH"/>
                                 <include reference="Tts-yC-35e"/>
@@ -150,16 +157,9 @@
                                 <include reference="eWC-Kd-8Uw"/>
                                 <include reference="k1F-Pe-gBu"/>
                                 <include reference="z0a-So-rOj"/>
-                                <include reference="1Es-fZ-ooR"/>
-                                <include reference="Zac-hO-fXP"/>
-                                <exclude reference="mrb-f4-bny"/>
-                                <exclude reference="ynd-5W-rJo"/>
-                                <exclude reference="9vS-g1-Vpg"/>
-                                <include reference="Gec-qP-VCl"/>
-                                <include reference="ImL-8s-VAG"/>
-                                <include reference="U0e-28-6MA"/>
-                                <exclude reference="fYy-lR-moK"/>
-                                <exclude reference="lUr-4m-nme"/>
+                                <include reference="9zL-4O-H2X"/>
+                                <exclude reference="cxH-j3-HN3"/>
+                                <exclude reference="fX3-ZI-a9V"/>
                                 <exclude reference="beI-rx-Ge3"/>
                                 <include reference="n3f-AG-2PO"/>
                             </mask>
@@ -173,14 +173,16 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Entrega" id="78G-iT-6SL">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="9Bq-fq-liv">
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="9Bq-fq-liv">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FRq-Zu-Wl1">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="salvar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXm-Up-Oi9"/>
+                                </connections>
                             </button>
                             <connections>
-                                <action selector="salvar:" destination="BYZ-38-t0r" id="Bw5-ro-SQf"/>
                                 <segue destination="pDU-DE-gHe" kind="show" id="ZM7-Pu-wvj"/>
                             </connections>
                         </barButtonItem>
@@ -193,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="76"/>
+            <point key="canvasLocation" x="1625" y="74"/>
         </scene>
         <!--Fotos das proximidades-->
         <scene sceneID="AwX-f0-Voo">
@@ -243,7 +245,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hvZ-DC-c5T" id="Ee9-S5-7CS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
