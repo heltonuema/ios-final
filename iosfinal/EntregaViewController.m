@@ -38,7 +38,7 @@
         _destinatarioTextField.text = self.entrega.destinatario;
         _enderecoTextField.text = self.entrega.endereco;
     }
-    
+    [_enderecoTextField addTarget:self action:@selector(editouEndereco) forControlEvents:UIControlEventEditingChanged];
     _addresses = [NSMutableArray new];
     _points = [NSMutableArray new];
     
@@ -91,6 +91,20 @@
     } else {
         // TODO - UIAlertController
     }
+    
+}
+
+-(void)editouEndereco{
+    NSLog(@"alterou texto");
+    NSString *endereco = _enderecoTextField.text;
+    [self.geocoder geocodeAddressString:endereco completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        for(CLPlacemark * placemark in placemarks){
+            NSLog(@"%@", [placemark postalCode]);
+            [self.map removeAnnotations:[self.map annotations]];
+            [self.map addAnnotation:[[Address alloc]initWithPlacemark:placemark withTitle:@"Titulo" andWithSubtitle:@"Subtitulo"]];
+            break;
+        }
+    }];
     
 }
 
