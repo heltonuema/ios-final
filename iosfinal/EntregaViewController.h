@@ -12,5 +12,7 @@
 @interface EntregaViewController : UIViewController
 
 @property Entrega * entrega;
+@property float latitude;
+@property float longitude;
 
 @end

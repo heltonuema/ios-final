@@ -100,6 +100,10 @@
     [self.geocoder geocodeAddressString:endereco completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         for(CLPlacemark * placemark in placemarks){
             NSLog(@"%@", [placemark postalCode]);
+            self.longitude = placemark.location.coordinate.longitude;
+            self.latitude = placemark.location.coordinate.latitude;
+            NSLog(@"Latitude: %f", _latitude);
+            NSLog(@"Longitude: %f", _longitude);
             [self.map removeAnnotations:[self.map annotations]];
             [self.map addAnnotation:[[Address alloc]initWithPlacemark:placemark withTitle:@"Titulo" andWithSubtitle:@"Subtitulo"]];
             break;
@@ -167,6 +171,8 @@
     
     return nil;
 }
+
+
 
 /*
  #pragma mark - Navigation
