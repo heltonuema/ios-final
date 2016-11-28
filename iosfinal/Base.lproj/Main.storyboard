@@ -69,7 +69,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="W5b-eE-lkr" kind="show" id="PfB-KY-cDH"/>
+                                    <segue destination="W5b-eE-lkr" kind="show" identifier="segueToFotos" id="PfB-KY-cDH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,8 +200,8 @@
         <!--Fotos das proximidades-->
         <scene sceneID="AwX-f0-Voo">
             <objects>
-                <collectionViewController id="W5b-eE-lkr" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jjK-tp-uvC">
+                <collectionViewController id="W5b-eE-lkr" customClass="FotosProximasViewControllerCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jjK-tp-uvC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,7 +245,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hvZ-DC-c5T" id="Ee9-S5-7CS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

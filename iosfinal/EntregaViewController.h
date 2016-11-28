@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "Entrega.h"
 
 @interface EntregaViewController : UIViewController
 
 @property Entrega * entrega;
-@property float latitude;
-@property float longitude;
+@property double latitude;
+@property double longitude;
+@property CLPlacemark * placemarkEntrega;
 
 @end

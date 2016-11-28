@@ -11,7 +11,6 @@
 #import "Entrega.h"
 #import "UIViewController+CoreData.h"
 #import "Address.h"
-@import MapKit;
 
 @interface EntregaViewController () <MKMapViewDelegate>
 
@@ -73,24 +72,43 @@
 }
 
 - (IBAction)salvar:(id)sender {
-    
-    
-    if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
-        if(!self.entrega) {
+
+        
+        
+        if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
+            if(!self.entrega) {
+                
+                self.entrega = [NSEntityDescription insertNewObjectForEntityForName:@"Entrega" inManagedObjectContext:self.managedObjectContext];
+                
+            }
             
-            self.entrega = [NSEntityDescription insertNewObjectForEntityForName:@"Entrega" inManagedObjectContext:self.managedObjectContext];
+            self.entrega.destinatario = _destinatarioTextField.text;
+            self.entrega.endereco = _enderecoTextField.text;
             
+            [self performSegueWithIdentifier:@"unwindToMaster" sender:sender];
+            
+        } else {
+            // TODO - UIAlertController
         }
         
-        self.entrega.destinatario = _destinatarioTextField.text;
-        self.entrega.endereco = _enderecoTextField.text;
-        
-        
-        [self performSegueWithIdentifier:@"unwindToMaster" sender:sender];
-        
-    } else {
-        // TODO - UIAlertController
-    }
+    
+    
+//    if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
+//        if(!self.entrega) {
+//            
+//            self.entrega = [NSEntityDescription insertNewObjectForEntityForName:@"Entrega" inManagedObjectContext:self.managedObjectContext];
+//            
+//        }
+//        
+//        self.entrega.destinatario = _destinatarioTextField.text;
+//        self.entrega.endereco = _enderecoTextField.text;
+//        
+//        
+//        [self performSegueWithIdentifier:@"unwindToMaster" sender:sender];
+//        
+//    } else {
+//        // TODO - UIAlertController
+//    }
     
 }
 
@@ -102,6 +120,7 @@
             NSLog(@"%@", [placemark postalCode]);
             self.longitude = placemark.location.coordinate.longitude;
             self.latitude = placemark.location.coordinate.latitude;
+            self.placemarkEntrega = placemark;
             NSLog(@"Latitude: %f", _latitude);
             NSLog(@"Longitude: %f", _longitude);
             [self.map removeAnnotations:[self.map annotations]];
@@ -174,13 +193,17 @@
 
 
 
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+     if([[segue identifier] isEqualToString:@"segueToFotos"]){
+         
+         [[segue destinationViewController]setPlacemarkEntrega : _placemarkEntrega];
+     }
  }
- */
+
 @end

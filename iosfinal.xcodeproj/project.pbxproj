@@ -23,6 +23,7 @@
 		D8910AE71DB0460E0024486A /* iosfinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910AE61DB0460E0024486A /* iosfinalTests.m */; };
 		D8910AF21DB0460E0024486A /* iosfinalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8910AF11DB0460E0024486A /* iosfinalUITests.m */; };
 		D8910B011DB046270024486A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8910B001DB046270024486A /* MapKit.framework */; };
+		D8BA37901DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BA378F1DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		D8910AF11DB0460E0024486A /* iosfinalUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosfinalUITests.m; sourceTree = "<group>"; };
 		D8910AF31DB0460E0024486A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8910B001DB046270024486A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8BA378E1DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FotosProximasViewControllerCollectionViewController.h; sourceTree = "<group>"; };
+		D8BA378F1DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FotosProximasViewControllerCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				D8910ADD1DB0460E0024486A /* Info.plist */,
 				D8910AD51DB0460E0024486A /* iosfinal.xcdatamodeld */,
 				D8910AC91DB0460E0024486A /* Supporting Files */,
+				D8BA378E1DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.h */,
+				D8BA378F1DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.m */,
 			);
 			path = iosfinal;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				B20876801DCBF43B00A1819D /* UIViewController+CoreData.m in Sources */,
 				B29A243E1DC2C36300DEB241 /* Entrega.m in Sources */,
 				D8910AD71DB0460E0024486A /* iosfinal.xcdatamodeld in Sources */,
+				D8BA37901DEB888F00E7C6F3 /* FotosProximasViewControllerCollectionViewController.m in Sources */,
 				B20876841DCBF47F00A1819D /* Address.m in Sources */,
 				D8910ACB1DB0460E0024486A /* main.m in Sources */,
 			);
