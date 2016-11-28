@@ -17,4 +17,8 @@
 @property double longitude;
 @property CLPlacemark * placemarkEntrega;
 
+-(void)setContatoManagedObject:(NSManagedObject *)managedObject;
+-(void)setManagedObjectContext:(NSManagedObjectContext *)context andEntityDescription:(NSEntityDescription *)entityDescription;
+
+
 @end

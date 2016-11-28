@@ -20,6 +20,10 @@
 
 - (IBAction)salvar:(id)sender;
 
+@property (weak, nonatomic) NSManagedObject *entregaManagedObject;
+@property (weak, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (weak, nonatomic) NSEntityDescription *entityDescription;
+
 @property CLGeocoder * geocoder;
 
 @property NSMutableArray<Address *> * addresses;
@@ -76,7 +80,76 @@
     NSLog(@"%@", @"pressionou salvar");
     
     
-    
+    if(_destinatarioTextField.text.length && _enderecoTextField.text.length){
+        
+        
+        if(_entregaManagedObject){
+            [_entregaManagedObject setValue:_destinatarioTextField.text forKey:@"destinatario"];
+            [_entregaManagedObject setValue:_enderecoTextField.text forKey:@"endereco"];
+        }
+        else{
+            //            NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+            //            NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+            NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[_entityDescription name] inManagedObjectContext:_managedObjectContext];
+            
+            // If appropriate, configure the new managed object.
+            // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
+            [newManagedObject setValue:_destinatarioTextField.text forKey:@"destinatario"];
+            [newManagedObject setValue:_enderecoTextField.text forKey:@"endereco"];
+            
+        }
+        
+        NSError * error = nil;
+        if (![_managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        
+        [self performSegueWithIdentifier:@"unwindToEntregas" sender:sender];
+        
+    }else{
+        // TODO - UIAlertController
+        UITextField * campoExigido = _destinatarioTextField;
+        NSString * erro = @"Destinatario é obrigatório";
+        if(!_destinatarioTextField.text.length){
+            erro = @"Destinatário é obrigatorio";
+        }else if(!_enderecoTextField.text.length){
+            erro = @"Endereço é obrigatório";
+            campoExigido = _enderecoTextField;
+        }
+        
+        
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"Info"
+                                      message:erro
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 [campoExigido becomeFirstResponder];
+                                 
+                             }];
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle:@"Cancel"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     [self performSegueWithIdentifier:@"unwindToEntregas" sender:sender];
+                                     
+                                 }];
+        
+        [alert addAction:ok];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
     
 //        if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
 //            if(!self.entrega) {
@@ -94,7 +167,6 @@
 //            // TODO - UIAlertController
 //        }
     
-    [self performSegueWithIdentifier:@"unwindToEntregas" sender:sender];
     
 //    if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
 //        if(!self.entrega) {
@@ -113,6 +185,15 @@
 //        // TODO - UIAlertController
 //    }
     
+}
+
+-(void)setEntregaManagedObject:(NSManagedObject *)managedObject{
+    _entregaManagedObject = managedObject;
+}
+
+-(void)setManagedObjectContext:(NSManagedObjectContext *)context andEntityDescription:(NSEntityDescription *)entityDescription{
+    _managedObjectContext = context;
+    _entityDescription = entityDescription;
 }
 
 -(void)editouEndereco{
