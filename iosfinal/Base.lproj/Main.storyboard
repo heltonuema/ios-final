@@ -201,24 +201,35 @@
         <scene sceneID="AwX-f0-Voo">
             <objects>
                 <collectionViewController id="W5b-eE-lkr" customClass="FotosProximasViewControllerCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jjK-tp-uvC">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jjK-tp-uvC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7bX-dM-P66">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="130" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tjO-iF-jGc">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="tjO-iF-jGc">
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KQu-Py-3VZ">
+                                            <rect key="frame" x="8" y="8" width="114" height="114"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="topMargin" secondItem="KQu-Py-3VZ" secondAttribute="top" id="2iz-bb-oHT"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="KQu-Py-3VZ" secondAttribute="bottom" id="Meu-8R-b70"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="KQu-Py-3VZ" secondAttribute="leading" id="OI5-NF-x4M"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="KQu-Py-3VZ" secondAttribute="trailing" id="vLk-Lm-dXt"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -230,7 +241,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WxQ-Qw-CiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334" y="75"/>
+            <point key="canvasLocation" x="2333.5999999999999" y="74.212893553223395"/>
         </scene>
         <!--Entregas-->
         <scene sceneID="6Vd-JN-6ab">
