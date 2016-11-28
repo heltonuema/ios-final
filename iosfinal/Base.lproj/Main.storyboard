@@ -182,18 +182,17 @@
                                     <action selector="salvar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXm-Up-Oi9"/>
                                 </connections>
                             </button>
-                            <connections>
-                                <segue destination="pDU-DE-gHe" kind="show" id="ZM7-Pu-wvj"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="destinatarioTextField" destination="99r-es-krg" id="A2A-la-LB2"/>
                         <outlet property="enderecoTextField" destination="owS-Fx-a1J" id="RQi-BC-e99"/>
                         <outlet property="map" destination="YVv-ka-yaX" id="jcx-vw-v2x"/>
+                        <segue destination="Vkr-5Y-puF" kind="unwind" identifier="unwindToEntregas" unwindAction="unwindToEntregas:" id="kZV-Vg-xs4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Vkr-5Y-puF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1625" y="74"/>
         </scene>
@@ -201,7 +200,7 @@
         <scene sceneID="AwX-f0-Voo">
             <objects>
                 <collectionViewController id="W5b-eE-lkr" customClass="FotosProximasViewControllerCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="jjK-tp-uvC">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="jjK-tp-uvC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,7 +240,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WxQ-Qw-CiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2333.5999999999999" y="74.212893553223395"/>
+            <point key="canvasLocation" x="2492" y="75"/>
         </scene>
         <!--Entregas-->
         <scene sceneID="6Vd-JN-6ab">
@@ -252,12 +251,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hvZ-DC-c5T">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EntregaCell" selectionStyle="default" indentationWidth="10" id="hvZ-DC-c5T">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hvZ-DC-c5T" id="Ee9-S5-7CS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN9-da-Abi">
+                                            <rect key="frame" x="8" y="12" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -293,7 +301,4 @@
             <point key="canvasLocation" x="-193" y="76"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZM7-Pu-wvj"/>
-    </inferredMetricsTieBreakers>
 </document>

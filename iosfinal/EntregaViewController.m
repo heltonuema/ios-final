@@ -73,25 +73,28 @@
 
 - (IBAction)salvar:(id)sender {
 
-        
-        
-        if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
-            if(!self.entrega) {
-                
-                self.entrega = [NSEntityDescription insertNewObjectForEntityForName:@"Entrega" inManagedObjectContext:self.managedObjectContext];
-                
-            }
-            
-            self.entrega.destinatario = _destinatarioTextField.text;
-            self.entrega.endereco = _enderecoTextField.text;
-            
-            [self performSegueWithIdentifier:@"unwindToMaster" sender:sender];
-            
-        } else {
-            // TODO - UIAlertController
-        }
-        
+    NSLog(@"%@", @"pressionou salvar");
     
+    
+    
+    
+//        if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
+//            if(!self.entrega) {
+//                
+//                self.entrega = [NSEntityDescription insertNewObjectForEntityForName:@"Entrega" inManagedObjectContext:self.managedObjectContext];
+//                
+//            }
+//            
+//            self.entrega.destinatario = _destinatarioTextField.text;
+//            self.entrega.endereco = _enderecoTextField.text;
+//            
+//            [self performSegueWithIdentifier:@"unwindToEntregas" sender:sender];
+//            
+//        } else {
+//            // TODO - UIAlertController
+//        }
+    
+    [self performSegueWithIdentifier:@"unwindToEntregas" sender:sender];
     
 //    if(_destinatarioTextField.text.length && _enderecoTextField.text.length) {
 //        if(!self.entrega) {
